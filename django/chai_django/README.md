@@ -1,4 +1,27 @@
+# Chai Aur Django
+
+This project was built while learning from a YouTube course.
+
+## 📚 Learning Resource
+
+- **Course:** [Chai Aur Django](https://youtu.be/j6szNSzw4BU?si=ooeNjUqWS1RZaPiq)  
+- **Instructor:**  [Hitesh Chaudhary](https://hitesh.ai/)
+- **Platform:** [YouTube](https://youtu.be/j6szNSzw4BU?si=ooeNjUqWS1RZaPiq)
+- **Link:** https://youtu.be/j6szNSzw4BU?si=ooeNjUqWS1RZaPiq
+
+## 🧠 What I Learned
+- Django project structure
+- Models, Views, Templates
+- Forms and URL routing
+
+## ⚠️ Disclaimer
+This project is created for **learning purposes**.  
+The code is written by me while following the tutorial, with some personal modifications.
+
+
 # Beginner-friendly list of the basic Django commands
+### **[Below commands are from ChatGPT](https://chatgpt.com/share/694937e7-b750-8006-9ae9-46a9e140ec06)**
+
 **1️⃣ Creating & Running a Django Project**
 - ***Create a Django project***
     ``` 
