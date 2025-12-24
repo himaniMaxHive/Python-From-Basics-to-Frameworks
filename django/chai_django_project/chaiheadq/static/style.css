@@ -1,0 +1,21 @@
+.search-form {
+    min-width: 350px;
+}
+
+.search-input {
+    border-radius: 20px;
+    padding-left: 15px;
+}
+
+.search-btn {
+    border-radius: 20px;
+    padding: 6px 20px;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+}
+
+.btn {
+    border-radius: 20px;
+}

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <title>{% block title %} Tea and Tweets {% endblock %}</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm px-4">
+    <a class="navbar-brand fw-bold" href="#">Tweetbar</a>
+
+    <div class="mx-auto">
+        <form action="{% url "search_tweet" %}" class="d-flex search-form">
+          {% csrf_token %}
+            <input 
+                name = "search_value"
+                class="form-control me-2 search-input" 
+                type="search" 
+                placeholder="Search tweets..."
+            >
+            <button class="btn btn-outline-success search-btn" type="submit">
+                Search
+            </button>
+        </form>
+    </div>
+
+    <div class="d-flex gap-2">
+        <a class="btn btn-primary" href="{% url "tweet_list" %}">Tweet Home</a>
+        {% if user.is_authenticated %}
+          <form action="{% url "logout" %}" method="post">
+            {% csrf_token %}
+            <button class="btn btn-danger"type="submit">Logout</button>
+          </form>
+        {% else %}
+          <a href="{% url "register" %}" class="btn btn-primary mx-2">Register</a>
+          <a href="{% url "login" %}" class="btn btn-success mx-2">Login</a>
+          {% endif %}
+    </div>
+</nav>
+
+    <div class="container">{% block content %} {% endblock %}</div>
+  </body>
+</html>
