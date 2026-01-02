@@ -7,7 +7,7 @@ def home(request):
     posts = Blog.objects.filter(is_featured=False, status='Published')
     # fetch about us
     try:
-        about=About.objects.get()
+        about=About.objects.get() # get will fetch only 1 data
     except:
         about=None
     context = {
