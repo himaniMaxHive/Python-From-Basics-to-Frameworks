@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from blogs.models import Category, Blog
 from assignments.models import About
+from .forms import RegistrationForm
 def home(request):
     # fetch categories from model
     featured_posts = Blog.objects.filter(is_featured=True, status='Published').order_by('updated_at')
@@ -15,3 +16,10 @@ def home(request):
         'posts':posts,
         'about':about}
     return render(request, 'home.html',context)
+
+def register(request):
+    form = RegistrationForm()
+    context = {
+        'form':form
+    }
+    return render(request, 'register.html',context)
